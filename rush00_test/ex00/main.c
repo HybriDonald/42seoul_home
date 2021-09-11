@@ -6,15 +6,21 @@
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 14:09:09 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/11 14:09:14 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/11 15:41:07 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void rush(int x, int y);	// Prototype of rush();
+void	rush(int x, int y);
 
-int main() 
+int	main(void)
 {
-	rush(2, 2);
+	rush(2, 5);
+	rush(4, 5);
+	rush(1, 3);
+	rush(3, 1);
+	rush(1, 0);
+	rush(-1, 5);
+	rush(5, -1);
+	rush(0, 1);
 	return (0);
-
 }

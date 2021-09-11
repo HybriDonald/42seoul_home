@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush04.c                                           :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 12:34:04 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/11 15:37:05 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/11 15:44:27 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	print_head(int x)
 			ft_putchar('B');
 			i++;
 		}
-		ft_putchar('C');
+		ft_putchar('A');
 	}
 	ft_putchar('\n');
 }
@@ -70,7 +70,7 @@ void	print_foot(int x)
 			ft_putchar('B');
 			i++;
 		}
-		ft_putchar('A');
+		ft_putchar('C');
 	}
 	ft_putchar('\n');
 }

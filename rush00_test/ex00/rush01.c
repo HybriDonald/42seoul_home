@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush04.c                                           :+:      :+:    :+:   */
+/*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 12:34:04 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/11 15:37:05 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/11 15:43:51 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ void	print_head(int x)
 {
 	int	i;
 
-	ft_putchar('A');
+	ft_putchar('/');
 	i = 1;
 	if (x != 1)
 	{
 		while (i < x - 1)
 		{
-			ft_putchar('B');
+			ft_putchar('*');
 			i++;
 		}
-		ft_putchar('C');
+		ft_putchar('\\');
 	}
 	ft_putchar('\n');
 }
@@ -40,7 +40,7 @@ void	print_body(int x, int y)
 	{
 		while (j < y - 1)
 		{
-			ft_putchar('B');
+			ft_putchar('*');
 			i = 1;
 			while (i < x - 1)
 			{
@@ -49,7 +49,7 @@ void	print_body(int x, int y)
 			}
 			if (x != 1)
 			{
-				ft_putchar('B');
+				ft_putchar('*');
 			}
 			ft_putchar('\n');
 			j++;
@@ -61,16 +61,16 @@ void	print_foot(int x)
 {
 	int	i;
 
-	ft_putchar('C');
+	ft_putchar('\\');
 	i = 1;
 	if (x != 1)
 	{
 		while (i < x - 1)
 		{
-			ft_putchar('B');
+			ft_putchar('*');
 			i++;
 		}
-		ft_putchar('A');
+		ft_putchar('/');
 	}
 	ft_putchar('\n');
 }
