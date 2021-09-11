@@ -6,7 +6,7 @@
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 12:34:04 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/11 13:51:14 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/11 14:29:13 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void print_foot( int x )	// print bottom
 		{
 			ft_putchar('B');
 		}
-		ft_putchar('C');
+		ft_putchar('A');
 	}
 
 	ft_putchar('\n');
