@@ -6,7 +6,7 @@
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 17:17:58 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/15 17:35:11 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/15 18:16:27 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,52 @@
 
 void	ft_print_comb(void);
 
+void	ft_write_comb(char comb[3])
+{
+	if(!(comb[0] == '7' && comb[1] == 8 && comb[2] == '9'))
+	{
+		write(1, &comb[0], 1);
+		write(1, &comb[1], 1);
+		write(1, &comb[2], 1);
+	}
+	else
+	{
+		write(1, ",", 1);
+		write(1, " ", 1);
+	}
+}
+
 void	ft_print_comb(void)
 {
-	char c1, c2, c3;
+	char comb[3];
 
-	c1 = 0;
-	c2 = 1;
-	c3 = 2;
-
-	if (c1 != c2 && c1 != c3 && c2 != c3)
+	comb[0] = 0;
+	comb[1] = 1;
+	comb[2] = 1;
+	while (1)
 	{
-		while(c3 <= 9)
+		while (++comb[2] <= '9')
 		{
-			write(1, &c1, 1);
-			write(1, &c2, 1);
-			write(1, &c3, 1);
-			c3++;
+			ft_write_comb(comb);
+		}
+		if (++comb[1] <= '8')
+		{
+			comb[2] = comb[1];
+		}
+		else if (++comb[0] <= '7')
+		{
+			comb[1] = comb[0] + 1;
+			comb[2] = comb[1];
+		}
+		else
+		{
+			break;
 		}
 	}
+}
+
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
 }
