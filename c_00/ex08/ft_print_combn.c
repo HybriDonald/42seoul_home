@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 17:17:58 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/22 11:59:30 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:24:00 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,22 @@ void	ft_write_comb(char comb[3])
 	}
 }
 
-void	ft_print_comb(void)
+void	ft_print_combn(int n)
 {
-	char	comb[3];
+	char	comb[10];
+	int		i;
 
-	comb[0] = '0';
-	comb[1] = '1';
-	comb[2] = '1';
+	i = 0;
+	while (i <= n - 1)
+	{
+		comb[i] = i + '0';
+		if (i == n - 1)
+		{
+			comb[i] = (i - 1) + '0';
+		}
+		i++;
+	}
+
 	while (1)
 	{
 		while (++comb[2] <= '9')

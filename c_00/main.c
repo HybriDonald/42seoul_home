@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 16:32:44 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/22 11:14:30 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/22 11:20:13 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/22 13:20:16 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 
-void	ft_putchar(char c);
 
-void	ft_putchar(char c)
+
+int	main(void)
 {
-	write(1, &c, 1);
+	return (0);
 }
