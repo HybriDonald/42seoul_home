@@ -1,0 +1,56 @@
+[
+    {
+        "name": "ft_putchar",
+        "compare-output": "c00/ex00-output.txt",
+        "file": "ex00/ft_putchar.c",
+        "test-script": "c00/ex00.c"
+    },
+    {
+        "name": "ft_print_alphabet",
+        "compare-output": "c00/ex01-output.txt",
+        "file": "ex01/ft_print_alphabet.c",
+        "test-script": "c00/ex01.c"
+    },
+    {
+        "name": "ft_print_reverse_alphabet",
+        "compare-output": "c00/ex02-output.txt",
+        "file": "ex02/ft_print_reverse_alphabet.c",
+        "test-script": "c00/ex02.c"
+    },
+    {
+        "name": "ft_print_numbers",
+        "compare-output": "c00/ex03-output.txt",
+        "file": "ex03/ft_print_numbers.c",
+        "test-script": "c00/ex03.c"
+    },
+    {
+        "name": "ft_is_negative",
+        "compare-output": "c00/ex04-output.txt",
+        "file": "ex04/ft_is_negative.c",
+        "test-script": "c00/ex04.c"
+    },
+    {
+        "name": "ft_print_comb",
+        "compare-output": "c00/ex05-output.txt",
+        "file": "ex05/ft_print_comb.c",
+        "test-script": "c00/ex05.c"
+    },
+    {
+        "name": "ft_print_comb2",
+        "compare-output": "c00/ex06-output.txt",
+        "file": "ex06/ft_print_comb2.c",
+        "test-script": "c00/ex06.c"
+    },
+    {
+        "name": "ft_putnbr",
+        "compare-output": "c00/ex07-output.txt",
+        "file": "ex07/ft_putnbr.c",
+        "test-script": "c00/ex07.c"
+    },
+    {
+        "name": "ft_print_combn",
+        "compare-output": "c00/ex08-output.txt",
+        "file": "ex08/ft_print_combn.c",
+        "test-script": "c00/ex08.c"
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "ft_ft",
+        "compare-output": false,
+        "file": "ex00/ft_ft.c",
+        "test-script": "c01/ex00.c"
+    },
+    {
+        "name": "ft_ultimate_ft",
+        "compare-output": false,
+        "file": "ex01/ft_ultimate_ft.c",
+        "test-script": "c01/ex01.c"
+    },
+    {
+        "name": "ft_swap",
+        "compare-output": false,
+        "file": "ex02/ft_swap.c",
+        "test-script": "c01/ex02.c"
+    },
+    {
+        "name": "ft_div_mod",
+        "compare-output": false,
+        "file": "ex03/ft_div_mod.c",
+        "test-script": "c01/ex03.c"
+    },
+    {
+        "name": "ft_ultimate_div_mod",
+        "compare-output": false,
+        "file": "ex04/ft_ultimate_div_mod.c",
+        "test-script": "c01/ex04.c"
+    },
+    {
+        "name": "ft_putstr",
+        "compare-output": "c01/ex05-output.txt",
+        "file": "ex05/ft_putstr.c",
+        "test-script": "c01/ex05.c"
+    },
+    {
+        "name": "ft_strlen",
+        "compare-output": false,
+        "file": "ex06/ft_strlen.c",
+        "test-script": "c01/ex06.c"
+    },
+    {
+        "name": "ft_rev_int_tab",
+        "compare-output": false,
+        "file": "ex07/ft_rev_int_tab.c",
+        "test-script": "c01/ex07.c"
+    },
+    {
+        "name": "ft_sort_int_tab",
+        "compare-output": false,
+        "file": "ex08/ft_sort_int_tab.c",
+        "test-script": "c01/ex08.c"
+    }
+]
