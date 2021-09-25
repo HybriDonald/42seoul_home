@@ -6,14 +6,13 @@
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 22:02:14 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/23 22:03:05 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/25 15:44:26 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_ultimate_ft(int *********nbr);
+void	ft_ultimate_ft(int *********nbr);
 
-void    ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
-    *********nbr = 42;
-    return ;
+	*********nbr = 42;
 }
