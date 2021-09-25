@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 16:35:02 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/15 17:16:54 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/23 22:03:38 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/23 22:13:00 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_reverse_alphabet(void);
+void    ft_swap(int *a, int *b);
 
-void	ft_print_reverse_alphabet(void)
+void    ft_swap(int *a, int *b)
 {
-	char	i;
-
-	i = 'z';
-	while (i >= 'a')
-	{
-		write(1, &i, 1);
-		i--;
-	}
+    int temp;
+    
+    temp = 0;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    temp = 0;
+    return ;
 }

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 16:40:06 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/15 17:16:32 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/24 01:24:23 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/24 01:27:52 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void);
+void    ft_putstr(char *str);
 
-void	ft_print_numbers(void)
+void    ft_putstr(char *str)
 {
-	char	c;
+    int i;
 
-	c = '0';
-	while (c <= '9')
-	{
-		write(1, &c, 1);
-		c++;
-	}
+    i = 0;
+    while (str[i])
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+    return;
 }

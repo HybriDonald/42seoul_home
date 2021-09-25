@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 16:32:44 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/22 11:14:30 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/23 22:02:14 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/23 22:03:05 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void    ft_ultimate_ft(int *********nbr);
 
-void	ft_putchar(char c);
-
-void	ft_putchar(char c)
+void    ft_ultimate_ft(int *********nbr)
 {
-	write(1, &c, 1);
+    *********nbr = 42;
+    return ;
 }

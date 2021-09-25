@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.kr      +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 16:35:02 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/22 11:15:24 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/24 01:26:37 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/24 01:36:04 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int    ft_strlen(char *str);
 
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
+int    ft_strlen(char *str)
 {
-	char	i;
+    int i;
+    int count;
 
-	i = 'a';
-	while (i <= 'z')
-	{
-		write(1, &i, 1);
-		i++;
-	}
+    i = 0;
+    count = 0;
+    while (str[i])
+    {
+        count++;
+        i++;
+    }
+    return (count);
 }

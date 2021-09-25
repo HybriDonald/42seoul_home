@@ -3,17 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seonghon <seonghon@student.42seoul.>       +#+  +:+       +#+        */
+/*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 11:20:13 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/22 13:20:16 by seonghon         ###   ########.fr       */
+/*   Created: 2021/09/23 22:07:30 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/24 01:52:16 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 
+void    ft_rev_int_tab(int *tab, int size);
 
-
-int	main(void)
+int main(void)
 {
-	return (0);
+    int tab1[10] = { -84, 7, -83, -62, 65, 98, 52, -34, 60, -89 };
+    int tab2[11] = { 10, 26, 39, 99, -95, 95, 39, 24, -62, -50, 92 };
+    int i = 0;
+
+    ft_rev_int_tab(tab1, 10);
+    ft_rev_int_tab(tab2, 11);
+
+    while(i < 11)
+    {
+        printf("%d, %d \n", tab1[i], tab2[i]);
+        i++;
+    }
+    return (0);
 }
