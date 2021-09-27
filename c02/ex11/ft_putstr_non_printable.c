@@ -6,7 +6,7 @@
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 01:53:45 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/27 12:33:07 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/27 21:41:01 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,21 @@ int	ft_str_is_printable(char c)
 
 void	ft_printhex(char c)
 {
-	int		mod;
-	int		index;
-	char	hex[2];
+	int				mod;
+	int				index;
+	char			hex[2];
+	unsigned char	re_c;
 
 	index = 0;
+	re_c = (unsigned char)c;
 	while (index < 2)
 	{
-		mod = c % 16;
+		mod = re_c % 16;
 		if (mod < 10)
 			hex[index] = mod + '0';
 		else
 			hex[index] = (mod - 10) + 'a';
-		c = c / 16;
+		re_c = re_c / 16;
 		index++;
 	}
 	index--;
