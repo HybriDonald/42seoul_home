@@ -6,7 +6,7 @@
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 02:39:04 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/27 16:48:07 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/28 01:08:08 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_print_content(void *addr, unsigned int size)
 {
-	int		i;
-	char	c;
+	unsigned int	i;
+	char			c;
 
 	i = 0;
 	while (i < size)
@@ -29,8 +29,27 @@ void	ft_print_content(void *addr, unsigned int size)
 	}
 }
 
-void	ft_print_hex(char *hex, int index, int i)
-{
+void	ft_print_hex(char *hex, unsigned int i,
+					unsigned char c, unsigned int size)
+{	
+	int	index;
+
+	index = 0;
+	while (index < 2)
+	{
+		if (!(i >= size))
+		{
+			hex[index] = c % 16;
+			if (hex[index] < 10)
+				hex[index] = hex[index] + '0';
+			else
+				hex[index] = (hex[index] - 10) + 'a';
+			c = c / 16;
+		}
+		else
+			hex[index] = ' ';
+		index++;
+	}
 	while (--index >= 0)
 		write(1, &hex[index], 1);
 	if (i % 2)
@@ -39,31 +58,18 @@ void	ft_print_hex(char *hex, int index, int i)
 
 void	ft_print_content_hex(void *addr, unsigned int size)
 {
-	char	hex[2];
-	char	c;
-	int		i;
-	int		index;
+	char			hex[2];
+	unsigned char	c;
+	unsigned int	i;
 
 	i = 0;
-	while (i < size)
+	while (i < 16)
 	{
-		index = 0;
-		c = *((char *)addr + i);
-		while (index < 2)
-		{
-			hex[index] = c % 16;
-			if (hex[index] < 10)
-				hex[index] = hex[index] + '0';
-			else
-				hex[index] = (hex[index] - 10) + 'a';
-			c = c / 16;
-			index++;
-		}
-		ft_print_hex(hex, index, i);
+		if (!(i >= size))
+			c = (unsigned char)*((char *)addr + i);
+		ft_print_hex(hex, i, c, size);
 		i++;
 	}
-	if (size % 2)
-		write(1, " ", 1);
 }
 
 void	ft_print_addr(void *addr)
