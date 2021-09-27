@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 01:56:03 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/26 14:27:24 by seongmin         ###   ########.fr       */
+/*   Created: 2021/09/26 14:55:37 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/26 22:55:15 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size);
-
-void	ft_sort_int_tab(int *tab, int size)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	key;
 	int	i;
-	int	j;
 
-	i = 1;
-	j = 0;
-	while (i < size)
+	i = 0;
+	while (src[i] && i < n)
 	{
-		key = tab[i];
-		j = i - 1;
-		while (j >= 0 && key < tab[j])
-		{
-			tab[j + 1] = tab[j];
-			j--;
-		}
-		tab[j + 1] = key;
+		dest[i] = src[i];
 		i++;
 	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+	}
+	return (dest);
 }

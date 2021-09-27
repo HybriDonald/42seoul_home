@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 01:56:03 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/26 14:27:24 by seongmin         ###   ########.fr       */
+/*   Created: 2021/09/26 15:56:11 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/26 17:49:48 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size);
-
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_str_is_printable(char *str)
 {
-	int	key;
 	int	i;
-	int	j;
 
-	i = 1;
-	j = 0;
-	while (i < size)
+	i = 0;
+	if (str[i] == '\0')
+		return (1);
+	while (str[i])
 	{
-		key = tab[i];
-		j = i - 1;
-		while (j >= 0 && key < tab[j])
-		{
-			tab[j + 1] = tab[j];
-			j--;
-		}
-		tab[j + 1] = key;
+		if (!(str[i] >= 32 && str[i] <= 126))
+			return (0);
 		i++;
 	}
+	return (1);
 }

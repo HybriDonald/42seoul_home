@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 01:56:03 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/26 14:27:24 by seongmin         ###   ########.fr       */
+/*   Created: 2021/09/26 17:50:29 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/26 17:55:33 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size);
-
-void	ft_sort_int_tab(int *tab, int size)
+char	*ft_strupcase(char *str)
 {
-	int	key;
 	int	i;
-	int	j;
 
-	i = 1;
-	j = 0;
-	while (i < size)
+	i = 0;
+	while (str[i])
 	{
-		key = tab[i];
-		j = i - 1;
-		while (j >= 0 && key < tab[j])
-		{
-			tab[j + 1] = tab[j];
-			j--;
-		}
-		tab[j + 1] = key;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
 		i++;
 	}
+	return (str);
 }

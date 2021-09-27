@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/24 01:56:03 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/26 14:27:24 by seongmin         ###   ########.fr       */
+/*   Created: 2021/09/26 15:16:05 by seonghon          #+#    #+#             */
+/*   Updated: 2021/09/26 15:49:40 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size);
-
-void	ft_sort_int_tab(int *tab, int size)
+int	ft_str_is_alpha(char *str)
 {
-	int	key;
 	int	i;
-	int	j;
 
-	i = 1;
-	j = 0;
-	while (i < size)
+	i = 0;
+	if (str[0] == '\0')
+		return (1);
+	while (str[i])
 	{
-		key = tab[i];
-		j = i - 1;
-		while (j >= 0 && key < tab[j])
-		{
-			tab[j + 1] = tab[j];
-			j--;
-		}
-		tab[j + 1] = key;
+		if (!((str[i] >= 'a' && str[i] <= 'z')
+				|| (str[i] >= 'A' && str[i] <= 'Z')))
+			return (0);
 		i++;
 	}
+	return (1);
 }
