@@ -6,20 +6,24 @@
 /*   By: seonghon <seonghon@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 10:22:14 by seonghon          #+#    #+#             */
-/*   Updated: 2021/09/29 10:23:49 by seonghon         ###   ########.fr       */
+/*   Updated: 2021/09/29 14:25:33 by seonghon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char	*dest, char *src)
 {
-	while (*dest)
-		dest++;
-	while (*src)
+	int	i;
+	int	d_size;
+
+	i = 0;
+	d_size = 0;
+	while (dest[d_size])
+		d_size++;
+	while (src[i])
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[d_size + i] = src[i];
+		i++;
 	}
-	*dest = '\0';
+	dest[d_size + i] = '\0';
 	return (dest);
 }
